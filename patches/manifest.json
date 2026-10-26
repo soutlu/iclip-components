@@ -9,6 +9,13 @@
     },
     "compositions/components/caption-highlight.html": {
       "replaces": "e3364ce3229e9f87e6094f6a26e53d2b61add606085e4c4a1c4d782c65abff9f"
-    }
+    },
+    "compositions/brand/brand-as.html": { "replaces": null },
+    "compositions/brand/brand-bm.html": { "replaces": null },
+    "compositions/brand/brand-dp.html": { "replaces": null },
+    "compositions/brand/brand-dpk.html": { "replaces": null },
+    "compositions/brand/brand-jf-tagline.html": { "replaces": null },
+    "compositions/brand/brand-jf-white.html": { "replaces": null },
+    "compositions/brand/brand-n8.html": { "replaces": null }
   }
 }
