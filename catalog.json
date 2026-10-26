@@ -15,7 +15,133 @@
     "Montserrat": { "css": "vendor/fonts/families/montserrat.css" },
     "Permanent Marker": { "css": "vendor/fonts/families/permanent-marker.css" },
     "Roboto Flex": { "css": "vendor/fonts/families/roboto-flex.css" },
-    "Roboto Flex Variable": { "css": "vendor/fonts/families/roboto-flex-variable.css" }
+    "Roboto Flex Variable": { "css": "vendor/fonts/families/roboto-flex-variable.css" },
+    "brand-AS": {
+      "css": "vendor/fonts/families/brand-as.css",
+      "brand": "AS",
+      "faces": [
+        { "file": "fonts/montserrat/montserrat-thinitalic.ttf", "weight": 100, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-thin.ttf", "weight": 100, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-extralightitalic.ttf", "weight": 200, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-extralight.ttf", "weight": 200, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-lightitalic.ttf", "weight": 300, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-light.ttf", "weight": 300, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-italic.ttf", "weight": 400, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-regular.ttf", "weight": 400, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-mediumitalic.ttf", "weight": 500, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-medium.ttf", "weight": 500, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-semibolditalic.ttf", "weight": 600, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-semibold.ttf", "weight": 600, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-bolditalic.ttf", "weight": 700, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-bold.ttf", "weight": 700, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-extrabolditalic.ttf", "weight": 800, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-extrabold.ttf", "weight": 800, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-blackitalic.ttf", "weight": 900, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-black.ttf", "weight": 900, "style": "normal" }
+      ]
+    },
+    "brand-BM": {
+      "css": "vendor/fonts/families/brand-bm.css",
+      "brand": "BM",
+      "faces": [
+        { "file": "fonts/anek-latin-semicondensed/aneklatin_semicondensed-thin.ttf", "weight": 100, "style": "normal" },
+        { "file": "fonts/anek-latin-semicondensed/aneklatin_semicondensed-extralight.ttf", "weight": 200, "style": "normal" },
+        { "file": "fonts/anek-latin-semicondensed/aneklatin_semicondensed-light.ttf", "weight": 300, "style": "normal" },
+        { "file": "fonts/anek-latin-semicondensed/aneklatin_semicondensed-regular.ttf", "weight": 400, "style": "normal" },
+        { "file": "fonts/anek-latin-semicondensed/aneklatin_semicondensed-medium.ttf", "weight": 500, "style": "normal" },
+        { "file": "fonts/anek-latin-semicondensed/aneklatin_semicondensed-semibold.ttf", "weight": 600, "style": "normal" },
+        { "file": "fonts/anek-latin-semicondensed/aneklatin_semicondensed-bold.ttf", "weight": 700, "style": "normal" },
+        { "file": "fonts/anek-latin-semicondensed/aneklatin_semicondensed-extrabold.ttf", "weight": 800, "style": "normal" }
+      ]
+    },
+    "brand-DP": {
+      "css": "vendor/fonts/families/brand-dp.css",
+      "brand": "DP",
+      "faces": [
+        { "file": "fonts/roboto/roboto-thinitalic.ttf", "weight": 100, "style": "italic" },
+        { "file": "fonts/roboto/roboto-thin.ttf", "weight": 100, "style": "normal" },
+        { "file": "fonts/roboto/roboto-extralightitalic.ttf", "weight": 200, "style": "italic" },
+        { "file": "fonts/roboto/roboto-extralight.ttf", "weight": 200, "style": "normal" },
+        { "file": "fonts/roboto/roboto-lightitalic.ttf", "weight": 300, "style": "italic" },
+        { "file": "fonts/roboto/roboto-light.ttf", "weight": 300, "style": "normal" },
+        { "file": "fonts/roboto/roboto-italic.ttf", "weight": 400, "style": "italic" },
+        { "file": "fonts/roboto/roboto-regular.ttf", "weight": 400, "style": "normal" },
+        { "file": "fonts/roboto/roboto-mediumitalic.ttf", "weight": 500, "style": "italic" },
+        { "file": "fonts/roboto/roboto-medium.ttf", "weight": 500, "style": "normal" },
+        { "file": "fonts/roboto/roboto-semibolditalic.ttf", "weight": 600, "style": "italic" },
+        { "file": "fonts/roboto/roboto-semibold.ttf", "weight": 600, "style": "normal" },
+        { "file": "fonts/roboto/roboto-bolditalic.ttf", "weight": 700, "style": "italic" },
+        { "file": "fonts/roboto/roboto-bold.ttf", "weight": 700, "style": "normal" },
+        { "file": "fonts/roboto/roboto-extrabolditalic.ttf", "weight": 800, "style": "italic" },
+        { "file": "fonts/roboto/roboto-extrabold.ttf", "weight": 800, "style": "normal" },
+        { "file": "fonts/roboto/roboto-blackitalic.ttf", "weight": 900, "style": "italic" },
+        { "file": "fonts/roboto/roboto-black.ttf", "weight": 900, "style": "normal" }
+      ]
+    },
+    "brand-DPK": {
+      "css": "vendor/fonts/families/brand-dpk.css",
+      "brand": "DPK",
+      "faces": [
+        { "file": "fonts/rubik/rubik-lightitalic.ttf", "weight": 300, "style": "italic" },
+        { "file": "fonts/rubik/rubik-light.ttf", "weight": 300, "style": "normal" },
+        { "file": "fonts/rubik/rubik-italic.ttf", "weight": 400, "style": "italic" },
+        { "file": "fonts/rubik/rubik-regular.ttf", "weight": 400, "style": "normal" },
+        { "file": "fonts/rubik/rubik-mediumitalic.ttf", "weight": 500, "style": "italic" },
+        { "file": "fonts/rubik/rubik-medium.ttf", "weight": 500, "style": "normal" },
+        { "file": "fonts/rubik/rubik-semibolditalic.ttf", "weight": 600, "style": "italic" },
+        { "file": "fonts/rubik/rubik-semibold.ttf", "weight": 600, "style": "normal" },
+        { "file": "fonts/rubik/rubik-bolditalic.ttf", "weight": 700, "style": "italic" },
+        { "file": "fonts/rubik/rubik-bold.ttf", "weight": 700, "style": "normal" },
+        { "file": "fonts/rubik/rubik-extrabolditalic.ttf", "weight": 800, "style": "italic" },
+        { "file": "fonts/rubik/rubik-extrabold.ttf", "weight": 800, "style": "normal" },
+        { "file": "fonts/rubik/rubik-blackitalic.ttf", "weight": 900, "style": "italic" },
+        { "file": "fonts/rubik/rubik-black.ttf", "weight": 900, "style": "normal" }
+      ]
+    },
+    "brand-JF": {
+      "css": "vendor/fonts/families/brand-jf.css",
+      "brand": "JF",
+      "faces": [
+        { "file": "fonts/figtree/figtree-lightitalic.ttf", "weight": 300, "style": "italic" },
+        { "file": "fonts/figtree/figtree-light.ttf", "weight": 300, "style": "normal" },
+        { "file": "fonts/figtree/figtree-italic.ttf", "weight": 400, "style": "italic" },
+        { "file": "fonts/figtree/figtree-regular.ttf", "weight": 400, "style": "normal" },
+        { "file": "fonts/figtree/figtree-mediumitalic.ttf", "weight": 500, "style": "italic" },
+        { "file": "fonts/figtree/figtree-medium.ttf", "weight": 500, "style": "normal" },
+        { "file": "fonts/figtree/figtree-semibolditalic.ttf", "weight": 600, "style": "italic" },
+        { "file": "fonts/figtree/figtree-semibold.ttf", "weight": 600, "style": "normal" },
+        { "file": "fonts/figtree/figtree-bolditalic.ttf", "weight": 700, "style": "italic" },
+        { "file": "fonts/figtree/figtree-bold.ttf", "weight": 700, "style": "normal" },
+        { "file": "fonts/figtree/figtree-extrabolditalic.ttf", "weight": 800, "style": "italic" },
+        { "file": "fonts/figtree/figtree-extrabold.ttf", "weight": 800, "style": "normal" },
+        { "file": "fonts/figtree/figtree-blackitalic.ttf", "weight": 900, "style": "italic" },
+        { "file": "fonts/figtree/figtree-black.ttf", "weight": 900, "style": "normal" }
+      ]
+    },
+    "brand-N8": {
+      "css": "vendor/fonts/families/brand-n8.css",
+      "brand": "N8",
+      "faces": [
+        { "file": "fonts/montserrat/montserrat-thinitalic.ttf", "weight": 100, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-thin.ttf", "weight": 100, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-extralightitalic.ttf", "weight": 200, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-extralight.ttf", "weight": 200, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-lightitalic.ttf", "weight": 300, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-light.ttf", "weight": 300, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-italic.ttf", "weight": 400, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-regular.ttf", "weight": 400, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-mediumitalic.ttf", "weight": 500, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-medium.ttf", "weight": 500, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-semibolditalic.ttf", "weight": 600, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-semibold.ttf", "weight": 600, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-bolditalic.ttf", "weight": 700, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-bold.ttf", "weight": 700, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-extrabolditalic.ttf", "weight": 800, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-extrabold.ttf", "weight": 800, "style": "normal" },
+        { "file": "fonts/montserrat/montserrat-blackitalic.ttf", "weight": 900, "style": "italic" },
+        { "file": "fonts/montserrat/montserrat-black.ttf", "weight": 900, "style": "normal" }
+      ]
+    }
   },
   "categories": [
     { "id": "captions", "label": "字幕" },
