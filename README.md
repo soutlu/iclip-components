@@ -12,7 +12,7 @@
 | `thumbnails/`        | 组件面板的封面                                                                                         |
 | `fonts/`             | 品牌字体的字体文件，由 `catalog.json` 里字体的 `faces` 引用                                            |
 
-`catalog.json` 的 `fonts` 是 字体名 → `{ "css": "vendor/fonts/families/<名>.css", "brand"?: "<品牌缩写>", "faces"?: [{ "file": "fonts/<…>", "weight": 400, "style": "normal" }] }`。带 `brand` 的字体是成片里「字体」下拉的选项；写了 `faces` 的字体用 `fonts/` 下的文件，组装时生成 @font-face 并配上中文字形，发布的目录里不带 `faces`。组件读 `var(--font-display, …)` 或 `var(--font-body, …)` 时，组装时自动加上「字体」可填项；品牌组件可以自己写 `{ "id": "font", "type": "font", "label": "字体", "default": "<品牌字体名>" }`，把默认值设成本品牌的字体。
+`catalog.json` 的 `fonts` 是 字体名 → `{ "css": "vendor/fonts/families/<名>.css", "brand"?: "<品牌缩写>", "faces"?: [{ "file": "fonts/<…>", "weight": 400, "style": "normal" }] }`。带 `brand` 的字体是成片里「字体」下拉的选项；写了 `faces` 的字体用 `fonts/` 下的文件，组装时只为这些文件生成 @font-face，中文由 Noto Sans SC 兜底，发布的目录里不带 `faces`。组件读 `var(--font-display, …)` 或 `var(--font-body, …)` 时，组装时自动加上「字体」可填项；品牌组件可以自己写 `{ "id": "font", "type": "font", "label": "字体", "default": "<品牌字体名>" }`，把默认值设成本品牌的字体。
 
 ## 组装
 
