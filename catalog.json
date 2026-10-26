@@ -5,17 +5,17 @@
     "cjkFont": "vendor/fonts/noto-sans-sc.css"
   },
   "fonts": {
-    "Anton": "vendor/fonts/families/anton.css",
-    "Caveat": "vendor/fonts/families/caveat.css",
-    "Courier Prime": "vendor/fonts/families/courier-prime.css",
-    "DM Sans": "vendor/fonts/families/dm-sans.css",
-    "Figtree": "vendor/fonts/families/figtree.css",
-    "Geist": "vendor/fonts/families/geist.css",
-    "Inter": "vendor/fonts/families/inter.css",
-    "Montserrat": "vendor/fonts/families/montserrat.css",
-    "Permanent Marker": "vendor/fonts/families/permanent-marker.css",
-    "Roboto Flex": "vendor/fonts/families/roboto-flex.css",
-    "Roboto Flex Variable": "vendor/fonts/families/roboto-flex-variable.css"
+    "Anton": { "css": "vendor/fonts/families/anton.css" },
+    "Caveat": { "css": "vendor/fonts/families/caveat.css" },
+    "Courier Prime": { "css": "vendor/fonts/families/courier-prime.css" },
+    "DM Sans": { "css": "vendor/fonts/families/dm-sans.css" },
+    "Figtree": { "css": "vendor/fonts/families/figtree.css" },
+    "Geist": { "css": "vendor/fonts/families/geist.css" },
+    "Inter": { "css": "vendor/fonts/families/inter.css" },
+    "Montserrat": { "css": "vendor/fonts/families/montserrat.css" },
+    "Permanent Marker": { "css": "vendor/fonts/families/permanent-marker.css" },
+    "Roboto Flex": { "css": "vendor/fonts/families/roboto-flex.css" },
+    "Roboto Flex Variable": { "css": "vendor/fonts/families/roboto-flex-variable.css" }
   },
   "categories": [
     { "id": "captions", "label": "字幕" },

@@ -7,7 +7,8 @@
   本文件对原组件的改动：
   1. 改成 <template> 子合成；台词来自 window.__hyperframes.getVariables().words
      （[{ text, start, end, sentence }]，成片秒数），去掉写死的台词与重点词。
-  2. 去掉转大写；中文用 Noto Sans SC（本地字体文件），拉丁字母仍用 Anton。
+  2. 去掉转大写；中文用 Noto Sans SC（本地字体文件），拉丁字母仍用 Anton。字体读标题字体变量
+     var(--font-display, 'Anton')，成片里可以换字体；量字用词实际的字体。
   3. 尺寸按所在画面等比缩放：原组件按 1920×1080 设计，这里用容器单位换算（短边 1080 对应 100cqmin）；
      字号照原组件用画布量字，收进画面宽的 90%。
   4. 每个词写上所在句子的 data-hf-id="caption:<sentence>"，编辑器在画面上按它认出点中的是哪一句。
@@ -75,7 +76,7 @@
       }
 
       #caption-texture .lv-word {
-        font-family: 'Anton', 'Noto Sans SC', sans-serif;
+        font-family: var(--font-display, 'Anton'), 'Noto Sans SC', sans-serif;
         font-weight: 700;
         font-synthesis: none;
         color: #ffd0a0;
@@ -98,7 +99,7 @@
         var LETTER_SPACING = 0.04
 
         // 量一个词的宽度（以字号为单位）：字体与 .lv-word 一致（Anton 只有 400 一种字重，不合成粗体）；
-        // 画布不算字距，按每字 0.04em 补上。
+        // 画布不算字距，按每字 0.04em 补上。字体在建好词后按它的计算样式重设。
         var measureContext = document.createElement('canvas').getContext('2d')
         measureContext.font = "400 100px 'Anton', 'Noto Sans SC', sans-serif"
         function widthInEm(text) {
@@ -162,6 +163,9 @@
           tl.to(shadow, { opacity: 0, scale: 1.08, duration: 0.1, ease: 'power2.in' }, w.end)
           tl.set(shadow, { opacity: 0, visibility: 'hidden' }, w.end + 0.1)
         })
+        // 外层可以经 --font-display 换字体：量字用词实际的字体（字重照旧按 400 量）
+        var wordFont = wordEls.length > 0 ? getComputedStyle(wordEls[0]).fontFamily : ''
+        if (wordFont) measureContext.font = '400 100px ' + wordFont
 
         function fitAll() {
           WORDS.forEach(function (w, wi) {

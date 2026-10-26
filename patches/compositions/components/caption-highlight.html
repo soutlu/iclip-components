@@ -8,7 +8,8 @@
   1. 改成 <template> 子合成；台词来自 window.__hyperframes.getVariables().words
      （[{ text, start, end, sentence }]，成片秒数），同一 sentence 的词为一组，去掉写死的台词与分组。
   2. 按中文排版拼词：词与词之间不留间隔，两侧都是拉丁字母或数字时才隔开；去掉转大写。
-     中文用 Noto Sans SC（本地字体文件），拉丁字母仍用 Montserrat。
+     中文用 Noto Sans SC（本地字体文件），拉丁字母仍用 Montserrat。字体读标题字体变量
+     var(--font-display, 'Montserrat')，成片里可以换字体；量字用词实际的字体。
   3. 尺寸按所在画面等比缩放：原组件按 1920×1080 设计，这里用容器单位换算（短边 1080 对应 100cqmin）；
      一组放不下时折行；字号照原组件用画布量字，缩到整组不超过两行（不设最小字号）。
   4. 每组写上 data-hf-id="caption:<sentence>"，编辑器在画面上按它认出点中的是哪一句。
@@ -53,7 +54,7 @@
       }
 
       #highlight .hl-word {
-        font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+        font-family: var(--font-display, 'Montserrat'), 'Noto Sans SC', sans-serif;
         font-weight: 800;
         font-size: calc(80 * var(--u));
         color: #ffffff;
@@ -104,7 +105,8 @@
         var WORD_PADDING = 12
         var WORD_GAP = 16
 
-        // 量字（以字号为单位）：字体与 .hl-word 一致；画布不算字距，按每字 0.02em 补上。
+        // 量字（以字号为单位）：字体与 .hl-word 一致（建好词后按它的计算样式重设）；
+        // 画布不算字距，按每字 0.02em 补上。
         var measureContext = document.createElement('canvas').getContext('2d')
         measureContext.font = "800 100px 'Montserrat', 'Noto Sans SC', sans-serif"
         function widthInEm(text) {
@@ -239,6 +241,9 @@
           tl.to(grp, { opacity: 0, duration: 0.1, ease: 'power2.in' }, g.end - 0.1)
           tl.set(grp, { opacity: 0, visibility: 'hidden' }, g.end)
         })
+        // 外层可以经 --font-display 换字体：量字用词实际的字体
+        var wordFont = FITTED.length > 0 ? getComputedStyle(FITTED[0].els[0]).fontFamily : ''
+        if (wordFont) measureContext.font = '800 100px ' + wordFont
 
         function fitAll() {
           FITTED.forEach(function (group) {

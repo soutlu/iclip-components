@@ -9,7 +9,8 @@
   1. 改成 <template> 子合成；台词来自 window.__hyperframes.getVariables().words
      （[{ text, start, end, sentence }]，成片秒数），同一 sentence 的词为一组，去掉写死的台词与分组。
   2. 词与词按中文排版拼接：两侧都是拉丁字母或数字时才加空格；去掉转小写。
-  3. 白字黑描边（-webkit-text-stroke + paint-order），字重 700，字体 Noto Sans SC（本地字体文件）。
+  3. 白字黑描边（-webkit-text-stroke + paint-order），字重 700，字体读标题字体变量
+     var(--font-display, 'Noto Sans SC')（本地字体文件），成片里可以换字体。
   4. 尺寸按所在画面等比缩放：原组件按 1920×1080 设计，这里用容器单位换算（短边 1080 对应 100cqmin），
      安全区宽度为画面宽的 1400/1920；折行交给浏览器，去掉两行拆分与行间字重切换。
   5. 字号照原组件用画布量字，缩到整组不超过两行（不设最小字号）。
@@ -82,7 +83,7 @@
         text-align: center;
         line-height: 1.2;
         color: #ffffff;
-        font-family: 'Noto Sans SC', sans-serif;
+        font-family: var(--font-display, 'Noto Sans SC'), sans-serif;
         font-weight: 700;
         font-size: calc(72 * var(--u));
         letter-spacing: 0.02em;
@@ -98,7 +99,8 @@
         var CAPTION_FONT_SIZE = 72
         var LETTER_SPACING = 0.02
 
-        // 量字（以字号为单位）：字体与 .caption-line 一致；画布不算字距，按每字 0.02em 补上。
+        // 量字（以字号为单位）：字体与 .caption-line 一致（建好字幕行后按它的计算样式重设）；
+        // 画布不算字距，按每字 0.02em 补上。
         var measureContext = document.createElement('canvas').getContext('2d')
         measureContext.font = "700 100px 'Noto Sans SC', sans-serif"
         function widthInEm(text) {
@@ -177,6 +179,9 @@
           lineEls.push(lineEl)
           return groupEl
         })
+        // 外层可以经 --font-display 换字体：量字用字幕行实际的字体
+        var lineFont = lineEls.length > 0 ? getComputedStyle(lineEls[0]).fontFamily : ''
+        if (lineFont) measureContext.font = '700 100px ' + lineFont
 
         function fitAll() {
           GROUPS.forEach(function (group, index) {
